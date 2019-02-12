@@ -1,0 +1,43 @@
+I) Doctype - Serial No
+
+SlNo		Field Label				Field Name			Type				Options
+-------------------------------------------------------------------------------------------------------------------------------------------
+1. 		Delivery Required At			delivery_required_at		Link to Warehouse doctype
+2.		Delivery Required On			delivery_required_on		Date
+3. 		Vehicle Status				vehicle_status			Select 			Invoiced but not Received
+														Received but not Allocated
+														Allocated but not Delivered
+														Delivered
+4. 		Booking Reference Number		booking_reference_number	Data
+
+
+II) Doctype - Sales Order
+
+1.		Booking Reference Number		booking_reference_number	Data
+2. 		Delivery Required At			delivery_required_at		Link to Warehouse Doc
+
+
+III) Doctype - Warehouse
+
+1. 		Is Truck				is_truck			Select			Yes
+														No
+
+2. 		Latitude				latitude			Float		
+
+3. 		Longitude				longitude			Float
+
+4. 		Address Line 2				address_line_2			Select			Lalbagh Road
+														Banashankari
+														Rajajinagar
+														Others
+
+IV) Doctype - User
+
+1.		Base Warehouse Location			base_warehouse_location		Link to Warehouse Doc
+
+
+V) Newly Added Doctype called - Access Control Document in MotoInventory App
+
+1.		Control Level				control_level			Select			High, Medium, Low
+
+2. 		Is Default				is_default			Check 		
