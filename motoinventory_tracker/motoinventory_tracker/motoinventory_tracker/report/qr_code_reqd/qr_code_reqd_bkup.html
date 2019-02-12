@@ -1,0 +1,75 @@
+<style>
+    .print-format table, .print-format tr,
+    .print-format td, .print-format div, .print-format p {
+        font-family: Monospace;
+        line-height: 100%;
+        vertical-align: middle;
+    }
+    @media screen {
+        .print-format {
+            width: 33.1in;
+            padding: 0.25in;
+            min-height: 46.8<style>
+    .print-format table, .print-format tr,
+    .print-format td, .print-format div, .print-format p {
+        font-family: Monospace;
+        line-height: 200%;
+        vertical-align: middle;
+    }
+    @media screen {
+        .print-format {
+            width: 33.8in;
+            padding: 0.25in;
+            min-height: 46.8in;
+        }
+    }
+</style>
+
+
+
+<h2 class="text-center">{%= __("QR Code") %}</h2>
+
+<table class="no-border">
+	
+	<tbody>
+		<tr>
+		<div class="row items" style="margin-top: 40px">
+		{% for(var i=0, l=data.length; i<l; i++) { %}
+			
+				<td style="width:85px">   
+					
+					<img src={%=data[i][__("Serial_QR_Code")]%} width = "75.59px" height = "75px">
+							
+					
+					<br> {%= data[i][__("Serial Number")] %}</div>
+					<br>{%= data[i][__("Item Code")] %}
+					<br>
+					<br></td>
+				<td style="width:60px"> 
+				</td>
+				<td style="width:85px">   
+					
+					<img src={%=data[i][__("Serial_QR_Code")]%} width = "75.59px" height = "75px">
+							
+					
+					<br> {%= data[i][__("Serial Number")] %}</div>
+					<br>{%= data[i][__("Item Code")] %}
+					<br>
+					<br></td>
+				<td style="width:60px"> 
+				</td>				
+				{% if(i%2) { %}
+										
+					</tr>
+					<tr>
+
+				{% } %}
+			    
+
+							
+		{% } %}
+	</tbody>
+</table>
+<p class="text-right text-muted">Printed On {%= dateutil.str_to_user(dateutil.get_datetime_as_string()) %}</p>
+
+
